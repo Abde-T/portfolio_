@@ -1,17 +1,17 @@
 import React, { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import {  useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
 const Plane = () => {
   const { scene } = useGLTF("./plane/scene.gltf");
 
-  const planeRef = useRef<THREE.Object3D | null>(null); 
-  const propeller1Ref = useRef<THREE.Object3D | null>(null); 
+  const planeRef = useRef<THREE.Object3D | null>(null);
+  const propeller1Ref = useRef<THREE.Object3D | null>(null);
 
   const radiusX = 5; // Radius along the X-axis (horizontal stretch)
-  const radiusY = 1; // Radius along the Y-axis (vertical stretch)
-  const radiusZ = 1; // Radius along the Y-axis (vertical stretch)
+  const radiusY = 1.5; // Radius along the Y-axis (vertical stretch)
+  const radiusZ = 1.5; // Radius along the Y-axis (vertical stretch)
   const speed = 0.01; // Speed of the animation
   const centerX = 0; // Center of the circle along the X-axis
   const centerY = 0; // Center of the circle along the Y-axis
@@ -25,14 +25,16 @@ const Plane = () => {
       const y = centerY + radiusY * Math.cos(time); // Y position for the skewed circle
       const z = centerZ + radiusZ * Math.cos(time); // Y position for the skewed circle
       // Apply new position to the plane
-      if(planeRef.current) planeRef.current.position.set(x, y, z);
-
-      // Make the plane always face the direction of motion (look at the center)
-      planeRef.current.lookAt(centerX, centerY, 2);
+      planeRef.current.position.set(x, y, z);
+      planeRef.current.rotation.set(
+        THREE.MathUtils.degToRad(10),
+        centerY + radiusY * Math.cos(time),
+        centerZ + radiusZ * Math.sin(time)
+      );
 
       // Rotate the propellers
       if (propeller1Ref.current) propeller1Ref.current.rotation.z += 0.2;
- 
+
       // Increment the time for smooth animation
       time += speed; // Adjust the speed for faster or slower movement
       // Loop the animation by resetting the time when a full cycle is completed
@@ -76,7 +78,7 @@ const PlaneCanvas = () => {
     <div className="w-full h-screen absolute inset-0 z-0">
       <Canvas dpr={[1, 2]} gl={{ preserveDrawingBuffer: true }}>
         <ambientLight intensity={1.4} /> {/* Soft global light */}
-        <directionalLight position={[10, 10, 5]} intensity={10} />{" "}
+        <directionalLight position={[10, 10, 5]} intensity={5} />{" "}
         {/* Main light */}
         <spotLight
           position={[15, 20, 5]}
