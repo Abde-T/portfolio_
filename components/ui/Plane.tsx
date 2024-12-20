@@ -6,8 +6,8 @@ import * as THREE from "three";
 const Plane = () => {
   const { scene } = useGLTF("./plane/scene.gltf");
 
-  const planeRef = useRef();
-  const propeller1Ref = useRef();
+  const planeRef = useRef<THREE.Object3D | null>(null); 
+  const propeller1Ref = useRef<THREE.Object3D | null>(null); 
 
   const radiusX = 5; // Radius along the X-axis (horizontal stretch)
   const radiusY = 1; // Radius along the Y-axis (vertical stretch)
@@ -25,7 +25,7 @@ const Plane = () => {
       const y = centerY + radiusY * Math.cos(time); // Y position for the skewed circle
       const z = centerZ + radiusZ * Math.cos(time); // Y position for the skewed circle
       // Apply new position to the plane
-      planeRef.current.position.set(x, y, z);
+      if(planeRef.current) planeRef.current.position.set(x, y, z);
 
       // Make the plane always face the direction of motion (look at the center)
       planeRef.current.lookAt(centerX, centerY, 2);
