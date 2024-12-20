@@ -119,7 +119,7 @@ export const experience = [
   },
   {
     quote:
-      "Integrated Google/Apple Wallet for a seamless ticketing experience. Implemented dynamic start and stop selling dates for tickets. Developed schemas to generate GraphQL using environment variables. Utilized Firebase Remote Config to manage environment variables. Enhanced website security and user experience through various improvements.",
+      "Integrated Google/Apple Wallet functionality, delivering a seamless and efficient ticketing experience for users. Supported the development and testing of major features, including refund management, donations, and enhanced order data storage, leading to better data tracking. Contributed to the development and rigorous testing of a remote calculator service, ensuring accurate and efficient calculations for site operations etc...",
     name: "Evold",
     title: "Junior Software Engineer",
     img: "/evold.png",
@@ -129,11 +129,16 @@ export const experience = [
 export const socialMedia = [
   {
     id: 1,
+    img: "/resume.png",
+    link: "/resume.pdf",
+  },
+  {
+    id: 2,
     img: "/git.svg",
     link: "https://github.com/Abde-T",
   },
   {
-    id: 2,
+    id: 3,
     img: "/link.svg",
     link: "https://www.linkedin.com/in/abde-t/",
   },

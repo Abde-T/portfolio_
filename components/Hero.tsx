@@ -3,8 +3,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import EarthCanvas from "./ui/Earth";
-import StarsCanvas from "./ui/Stars";
+import PlaneCanvas from "./ui/Plane";
 
 const Hero = () => {
   return (
@@ -17,7 +16,7 @@ const Hero = () => {
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="#26FFDF"
+          fill="#04acdf"
         />
         <Spotlight
           className="h-[80vh] w-[50vw] top-10 left-full"
@@ -34,26 +33,12 @@ const Hero = () => {
         <Spotlight
           className="left-80 top-28 h-[80vh] w-[50vw]"
           fill="#FF2C10"
-        />
-      </div>
-
-      {/**
-       *  UI: grid
-       *  change bg color to bg-black-100 and reduce grid color from
-       *  0.2 to 0.03
-       */}
-      <div>
-        {/* Radial gradient for the container to give a faded look */}
-        <div
-          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
-          className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-gray-500
-         bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
         />
       </div>
 
       <div className="flex flex-col justify-center items-center z-10 absolute">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+          <p className="uppercase tracking-widest text-md font-medium text-center text-gray-100 max-w-80">
             Junior Software Engineer
           </p>
 
@@ -78,9 +63,6 @@ const Hero = () => {
             />
           </a>
         </div>
-      </div>
-      <div className="w-full h-full absolute 2xl:-right-[900px] -right-[700px] ">
-        <EarthCanvas />
       </div>
     </div>
   );

@@ -10,14 +10,16 @@ import Approach from "@/components/Approach";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import StarsCanvas from "@/components/ui/Stars";
+import PlaneCanvas from "@/components/ui/Plane";
 
 const Home = () => {
   return (
-    <main className=" bg-gray-500 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+    <main className=" bg-[#13162D] flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        {<StarsCanvas /> || ""}
+        <StarsCanvas />          
+        <PlaneCanvas />
         <Grid />
         <RecentProjects />
         <Clients />

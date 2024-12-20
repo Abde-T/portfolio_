@@ -10,7 +10,7 @@ const Clients = () => {
     <section id="experience" className="py-20">
       <h1 className="heading">
         My
-        <span className="text-[#26FFDF]"> work experience</span>
+        <span className="text-[#04acdf]"> work experience</span>
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">
@@ -21,7 +21,7 @@ const Clients = () => {
           <InfiniteMovingCards
             items={experience}
             direction="right"
-            speed="normal"
+            speed="slow"
           />
         </div>
       </div>

@@ -7,7 +7,7 @@ const Approach = () => {
   return (
     <section className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-[#26FFDF]">approach</span>
+        My <span className="text-[#04acdf]">approach</span>
       </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         <Card
@@ -136,11 +136,11 @@ const AceternityIcon = ({ order }: { order: string }) => {
       <button className="relative inline-flex overflow-hidden rounded-full p-[1px] ">
         <span
           className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
-         bg-[conic-gradient(from_90deg_at_50%_50%,#F26A1B_0%,#26FFDF_20%,#F26A1B_100%)]"
+         bg-[conic-gradient(from_90deg_at_50%_50%,#F26A1B_0%,#04acdf_20%,#F26A1B_100%)]"
         />
         <span
           className="inline-flex h-full w-full cursor-pointer items-center 
-        justify-center rounded-full bg-slate-950 px-5 py-2 text-[#26FFDF] backdrop-blur-3xl font-bold text-2xl"
+        justify-center rounded-full bg-slate-950 px-5 py-2 text-[#04acdf] backdrop-blur-3xl font-bold text-2xl"
         >
           {order}
         </span>

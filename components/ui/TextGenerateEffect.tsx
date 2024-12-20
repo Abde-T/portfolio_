@@ -32,10 +32,11 @@ export const TextGenerateEffect = ({
         {wordsArray.map((word, idx) => {
           return (
             <motion.span
-              key={word + idx}
-              // change here if idx is greater than 3, change the text color to #CBACF9
+              key={word + idx} //13162D
               className={` ${
-                idx < 2 ? "text-[#26FFDF]" : "dark:text-white text-black"
+                idx < 2
+                  ? "text-[#04acdf] drop-shadow-[2px_1px_3px_rgba(0,154,219,1)]"
+                  : "dark:text-white text-black"
               } opacity-0`}
             >
               {word}{" "}
