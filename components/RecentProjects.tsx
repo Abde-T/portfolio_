@@ -4,19 +4,20 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import Image from "next/image";
 
 const RecentProjects = () => {
   return (
     <section id="projects">
       <div className="py-20 ">
         <h1 className="heading">
-          A small selection of 
+          A small selection of
           <span className="text-[#04acdf]"> recent projects</span>
         </h1>
         <div className="flex  flex-wrap items-center justify-center p-4 gap-12 mt-10">
           {projects.map((item) => (
             <div
-              className=" lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]" 
+              className=" lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
               key={item.id}
             >
               <PinContainer>
@@ -25,9 +26,15 @@ const RecentProjects = () => {
                     className="relative w-full -skew-x-[45deg]  h-full overflow-hidden lg:rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
                   >
-                    <img src="/bg.png" alt="bgimg" />
+                    <Image src="/bg.png" alt="bgimg" width={500} height={500} />
                   </div>
-                  <img src={item.img} alt="cover" className=" absolute " />
+                  <Image
+                    src={item.img}
+                    alt="cover"
+                    className=" absolute "
+                    width={500}
+                    height={500}
+                  />
                 </div>
 
                 <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -54,7 +61,13 @@ const RecentProjects = () => {
                           transform: `translateX(-${5 * index + 2}px)`,
                         }}
                       >
-                        <img src={icon} alt="icon5" className="p-2" />
+                        <Image
+                          src={icon}
+                          alt="icon5"
+                          className="p-2"
+                          width={500}
+                          height={500}
+                        />
                       </div>
                     ))}
                   </div>

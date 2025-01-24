@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
-// Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+import Image from "next/image";
+import dynamic from "next/dynamic";
 
 import { cn } from "@/lib/utils";
 
@@ -59,7 +59,7 @@ export const BentoGridItem = ({
   const defaultOptions = {
     loop: copied,
     autoplay: copied,
-    animationData: animationData,
+    animationData: animationData|| {}, 
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -90,9 +90,11 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
-            <img
+            <Image
               src={img}
               alt={img}
+              width={500}
+              height={500}
               className={cn(imgClassName, "object-cover object-center ")}
             />
           )}
@@ -103,10 +105,11 @@ export const BentoGridItem = ({
           } `}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
               alt={spareImg}
-              //   width={220}
+              width={5}
+              height={5}
               className="object-cover object-center w-full h-full"
             />
           )}
@@ -182,7 +185,6 @@ export const BentoGridItem = ({
                 }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
               <MagicButton
