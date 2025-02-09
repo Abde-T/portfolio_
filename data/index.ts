@@ -50,7 +50,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a Minecraft clone using THREE JS",
+    title: "Currently building a Full Stack social network, with a solid system design ",
     description: "The Inside Scoop",
     className: "lg:col-span-3 md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",

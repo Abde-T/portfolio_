@@ -22,6 +22,8 @@ const Plane = () => {
   let elapsed = 0;
   useFrame((state, delta) => {
     elapsed += delta;
+        if (!planeRef.current) return;
+
     if (elapsed > 1 / 90) {
       if (planeRef.current) {
         // Skewed circular path: Stretch horizontally (radiusX) and vertically (radiusY)
