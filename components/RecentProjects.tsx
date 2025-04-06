@@ -12,7 +12,7 @@ const RecentProjects = () => {
       <div className="py-20 ">
         <h1 className="heading">
           A small selection of
-          <span className="text-[#04acdf]"> recent projects</span>
+          <span className="text-[#52b788]"> recent projects</span>
         </h1>
         <div className="flex  flex-wrap items-center justify-center p-4 gap-12 mt-10">
           {projects.map((item) => (
@@ -31,7 +31,7 @@ const RecentProjects = () => {
                   <Image
                     src={item.img}
                     alt="cover"
-                    className=" absolute "
+                    className=" absolute rounded-lg object-contain"
                     width={500}
                     height={500}
                   />
@@ -74,11 +74,11 @@ const RecentProjects = () => {
 
                   <div className="flex justify-center items-center">
                     <a href={item.link} target="_blank">
-                      <p className="flex lg:text-xl md:text-xs text-sm text-[#04acdf]">
+                      <p className="flex lg:text-xl md:text-xs text-sm text-[#52b788]">
                         Check Live Site
                       </p>
                     </a>
-                    <FaLocationArrow className="ms-3" color="#04acdf" />
+                    <FaLocationArrow className="ms-3" color="#52b788" />
                   </div>
                 </div>
               </PinContainer>

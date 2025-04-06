@@ -5,7 +5,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 
 // Earth component to load and display the 3D model
 const Earth = () => {
-  const { scene } = useGLTF("/planet/scene.gltf"); // Make sure the model is inside the public folder
+  const { scene } = useGLTF("/planet/planet.glb"); // Make sure the model is inside the public folder
 
   return (
     <primitive
