@@ -10,7 +10,8 @@ export const gridItems = [
     id: 1,
     title: "I prioritize high quality outcomes ",
     description: "",
-    className: "lg:col-span-2 md:col-span-4 md:row-span-4 lg:min-h-[60vh]",
+    className:
+      "lg:col-span-2   md:col-span-4 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/B2.png",
@@ -50,7 +51,8 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a Full Stack social network, with a solid system design ",
+    title:
+      "Currently building a Full Stack social network, with a solid system design ",
     description: "The Inside Scoop",
     className: "lg:col-span-3 md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -73,39 +75,25 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "Nexora",
+    des: "Why Tech Professionals Choose Nexora. A simple tech-focused social media platform where you can share ideas, get feedback, and connect with others",
+    img: "/Nexora.png",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/redux.png",
+      "/firebase.png",
+      "/nodejs.png",
+    ],
+    link: "https://www.nexorahub.site/",
+  },
+  {
+    id: 2,
     title: "Review My Project (RMP)",
     des: "A full-stack web application developed using the MERN (MongoDB, Express.js, React, Node.js) stack. It serves as a platform for users to share and evaluate projects, fostering a collaborative environment for feedback and improvement.",
     img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/nodejs.png", "/redux.png"],
     link: "https://rmp-abde-t.vercel.app/",
-  },
-  {
-    id: 2,
-    title: "Movie Heaven",
-    des: "A cutting-edge movie streaming application designed for cinematic enthusiasts.",
-    img: "/p2.png",
-    iconLists: [
-      "/next.svg",
-      "/tail.svg",
-      "/ts.svg",
-      "/redux.png",
-      "/firebase.png",
-    ],
-    link: "https://movieheaven.vercel.app/",
-  },
-  {
-    id: 3,
-    title: "Twitter Clone",
-    des: "A Twitter clone, leveraging modern web development technologies to create a seamless social media experience. The project incorporates Firebase for authentication, data storage, and real-time updates, Redux for efficient state management, and Tailwind CSS for a sleek and responsive user interface.",
-    img: "/p3.png",
-    iconLists: [
-      "/re.svg",
-      "/tail.svg",
-      "/ts.svg",
-      "/redux.png",
-      "/firebase.png",
-    ],
-    link: "https://twitter-clone-qviutiu6e-abde-t.vercel.app/",
   },
 ];
 

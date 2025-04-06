@@ -13,10 +13,10 @@ const Hero = () => {
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
        */}
-      <div>
+      {/* <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="#04acdf"
+          fill="#52b788"
         />
         <Spotlight
           className="h-[80vh] w-[50vw] top-10 left-full"
@@ -34,12 +34,12 @@ const Hero = () => {
           className="left-80 top-28 h-[80vh] w-[50vw]"
           fill="#FF2C10"
         />
-      </div>
+      </div> */}
 
       <div className="flex flex-col justify-center items-center z-10 absolute">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-md font-medium text-center text-gray-100 max-w-[400px]">
-            Web development Software Engineer
+            Software Engineer
           </p>
 
           {/**
@@ -48,14 +48,11 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="Web Developer Committed to Continuous Learning and Practical Application."
+            words=" Hi! I'm Abderrahmane a Web Developer Committed to Continuous Learning and Practical Application."
             className="text-center text-[40px] md:text-3xl lg:text-6xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Abderrahmane, a skilled software engineer based in
-            Morocco.
-          </p>
+        
           <a href="#projects">
             <MagicButton
               title="Show my work"

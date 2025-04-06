@@ -25,17 +25,19 @@ export const TextGenerateEffect = ({
     );
   }, [scope.current]);
 
+  console.log("wordsArray", wordsArray);
+
   const renderWords = () => {
     return (
       <motion.div ref={scope}>
         {wordsArray.map((word, idx) => {
           return (
             <motion.span
-              key={word + idx} //13162D
+              key={word + idx}
               className={` ${
-                idx < 2
-                  ? "text-[#04acdf] drop-shadow-[2px_1px_3px_rgba(0,154,219,1)]"
-                  : "dark:text-white text-black"
+                (idx === 3) || (idx < 7 && idx > 4)
+                  ? "text-[rgb(82,183,136)] "
+                  : "dark:text-white text-[40px]"
               } opacity-0`}
             >
               {word}{" "}

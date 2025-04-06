@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
 const Plane = () => {
-  const { scene } = useGLTF("./plane/scene.gltf");
+  const { scene } = useGLTF("./plane/plane.glb");
 
   const planeRef = useRef<THREE.Object3D | null>(null);
   const propeller1Ref = useRef<THREE.Object3D | null>(null);
