@@ -73,43 +73,45 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "KlipFlow",
+    des: "• AI Shorts Generator → turn long videos into vertical clips with auto-cropping + subtitles Timeline Editor → full control editing (positioning, background removal, transitions, etc.) Media Builder → automatically arrange images/videos, then adjust timing and layout",
+    img: "/klipflow.mp4",
+    iconLists: ["/re.svg", "/tail.svg", "/nodejs.png", "/redux.png"],
+    link: "https://klipflow.com/",
+  },
+  {
+    id: 2,
+    title: "Nexora",
+    des: "A full-stack web application developed using the MERN (MongoDB, Express.js, React, Node.js) stack. It serves as a platform for users to share and evaluate projects, fostering a collaborative environment for feedback and improvement.",
+    img: "/Nexora.png",
+    iconLists: ["/re.svg", "/tail.svg", "/nodejs.png", "/redux.png"],
+    link: "https://nex0ra.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Review My Project (RMP)",
     des: "A full-stack web application developed using the MERN (MongoDB, Express.js, React, Node.js) stack. It serves as a platform for users to share and evaluate projects, fostering a collaborative environment for feedback and improvement.",
     img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/nodejs.png", "/redux.png"],
     link: "https://rmp-abde-t.vercel.app/",
   },
-  {
-    id: 2,
-    title: "Movie Heaven",
-    des: "A cutting-edge movie streaming application designed for cinematic enthusiasts.",
-    img: "/p2.png",
-    iconLists: [
-      "/next.svg",
-      "/tail.svg",
-      "/ts.svg",
-      "/redux.png",
-      "/firebase.png",
-    ],
-    link: "https://movieheaven.vercel.app/",
-  },
-  {
-    id: 3,
-    title: "Twitter Clone",
-    des: "A Twitter clone, leveraging modern web development technologies to create a seamless social media experience. The project incorporates Firebase for authentication, data storage, and real-time updates, Redux for efficient state management, and Tailwind CSS for a sleek and responsive user interface.",
-    img: "/p3.png",
-    iconLists: [
-      "/re.svg",
-      "/tail.svg",
-      "/ts.svg",
-      "/redux.png",
-      "/firebase.png",
-    ],
-    link: "https://twitter-clone-qviutiu6e-abde-t.vercel.app/",
-  },
 ];
 
 export const experience = [
+  {
+    quote:
+      "Built a browser-based video editor SaaS with multi-track timelines, subtitles, transitions, keyframe animations, and FFmpeg-based composition pipelines. Architected distributed media processing pipelines including frontend editor, backend orchestration, and rendering infrastructure. Acquired 200+ users in the first month without paid marketing, validating early product demand.",
+    name: "KlipFlow",
+    title: "Founder & Full-Stack Engineer",
+    img: "/klipflow.png",
+  },
+  {
+    quote:
+      "Annotated, evaluated, and curated high-quality training data for AI models, focusing on frontend code generation tasks and real-world UI scenarios. Performed systematic assessment of AI-generated code, identifying edge cases, logical inconsistencies, and alignment gaps to improve model reliability. Designed and executed structured evaluation workflows to benchmark model outputs against usability, accessibility, and production-readiness standards.",
+    name: "Outlier AI",
+    title: "Software Engineer (AI Training Data)",
+    img: "/outlier.png",
+  },
   {
     quote:
       "Enhanced website UX by implementing dynamic animations and transitions, resulting in a 30% improvement in user satisfaction. Optimized the loading time by 20% through efficient API requests using Axios and collaborated with virtual team trough Git-based collaboration tools.",

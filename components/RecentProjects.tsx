@@ -28,16 +28,23 @@ const RecentProjects = () => {
                   >
                     <Image src="/bg.png" alt="bgimg" width={500} height={500} />
                   </div>
+                  <video
+                    src={item.img}
+                    autoPlay
+                    loop
+                    muted
+                    className="absolute m-auto inset-0 w-80 h-50  skew-x-[-20deg] rounded-2xl object-cover"
+                  />
                   <Image
                     src={item.img}
                     alt="cover"
-                    className=" absolute "
-                    width={500}
-                    height={500}
+                    className=" absolute skew-x-[-20deg] rounded-2xl"
+                    width={320}
+                    height={320}
                   />
                 </div>
 
-                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                <h1 className="font-bold lg:text-2xl md:text-xl  text-base line-clamp-1">
                   {item.title}
                 </h1>
 
