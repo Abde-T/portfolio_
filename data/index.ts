@@ -132,7 +132,7 @@ export const socialMedia = [
   {
     id: 1,
     img: "/resume.png",
-    link: "/resume.pdf",
+    link: "https://media.klipflow.com/file/klipflow/resume.pdf",
   },
   {
     id: 2,
