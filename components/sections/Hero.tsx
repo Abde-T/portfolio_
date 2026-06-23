@@ -74,9 +74,9 @@ export function Hero() {
         </div>
 
         {/* 5. Subheading */}
-        <p className="hero-sub max-w-[480px] font-body text-[clamp(1rem,2vw,1.25rem)] text-ink-muted">
+        {/* <p className="hero-sub max-w-[480px] font-body text-[clamp(1rem,2vw,1.25rem)] text-ink-muted">
           Building scalable web platforms and distributed media pipelines.
-        </p>
+        </p> */}
 
         {/* 6. CTA row */}
         <div className="hero-cta mt-4 flex items-center gap-6">
