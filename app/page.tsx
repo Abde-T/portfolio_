@@ -1,44 +1,57 @@
 "use client";
 
-import { navItems } from "@/data";
-import React, { Suspense, useEffect, useState } from "react";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import { useEffect, useState } from "react";
+import { gsap } from "@/lib/gsap";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import { CursorDot } from "@/components/ui/CursorDot";
+import { NoiseOverlay } from "@/components/ui/NoiseOverlay";
+import { Navbar } from "@/components/layout/Navbar";
+import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
+import { Stack } from "@/components/sections/Stack";
+import { Projects } from "@/components/sections/Projects";
+import { Experience } from "@/components/sections/Experience";
+import { Process } from "@/components/sections/Process";
+import { Contact } from "@/components/sections/Contact";
 
-const Hero = React.lazy(() => import("@/components/Hero"));
-const Footer = React.lazy(() => import("@/components/Footer"));
-const Clients = React.lazy(() => import("@/components/Clients"));
-const Approach = React.lazy(() => import("@/components/Approach"));
-const RecentProjects = React.lazy(() => import("@/components/RecentProjects"));
-const Grid = React.lazy(() => import("@/components/Grid"));
-const StarsCanvas = React.lazy(() => import("@/components/ui/Stars"));
-const PlaneCanvas = React.lazy(() => import("@/components/ui/Plane"));
+export default function Home() {
+  const [mounted, setMounted] = useState(false);
+  useSmoothScroll();
 
-const Home = () => {
-  const [show3D, setShow3D] = useState(false);
   useEffect(() => {
-    const timeout = setTimeout(() => setShow3D(true), 2000); // Delay 2s for better UX
-    return () => clearTimeout(timeout);
+    // Initial page transition overlay
+    const ctx = gsap.context(() => {
+      gsap.to(".page-transition-overlay", {
+        clipPath: "inset(100% 0 0 0)",
+        duration: 1.2,
+        ease: "expo.inOut",
+        onComplete: () => {
+          setMounted(true);
+        },
+      });
+    });
+    return () => ctx.revert();
   }, []);
 
   return (
-    <main className=" bg-[#13162D] flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
-        <FloatingNav navItems={navItems} />
-        <Hero />
-        {show3D && (
-          <Suspense fallback={<></>}>
-            <StarsCanvas />
-            <PlaneCanvas />
-          </Suspense>
-        )}
-        <Grid />
-        <RecentProjects />
-        <Clients />
-        <Approach />
-        <Footer />
+    <>
+      <div className="page-transition-overlay fixed inset-0 z-[99999] bg-ink pointer-events-none" style={{ clipPath: "inset(0 0 0 0)" }} />
+      <CursorDot />
+      <NoiseOverlay />
+      
+      {/* Hide content until initial transition clears up some space to avoid layout shifts on load */}
+      <div className="relative w-full opacity-100" style={{ opacity: mounted ? 1 : 0, transition: "opacity 0.1s" }}>
+        <Navbar />
+        <main className="w-full flex flex-col">
+          <Hero />
+          <About />
+          <Stack />
+          <Projects />
+          <Experience />
+          <Process />
+          <Contact />
+        </main>
       </div>
-    </main>
+    </>
   );
-};
-
-export default Home;
+}
